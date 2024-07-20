@@ -9,23 +9,82 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="2style.css" />
+  
   <style>
     body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        .main-content {
-            margin-left: 100px;
-            padding: 20px;
-        }
-        .header {
-            background-color: #0074D9;
-            color: #ffffff;
-            padding: 10px;
-            text-align: center;
-        }
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    .main-content {
+        padding: 20px;
+        background-color: white;
+    }
+
+    .header {
+        background-color: #002D62;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        margin-left: 70px;
+    }
+
+    .header h1 {
+        margin: 0;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        margin-left: 70px;
+    }
+
+    table th, table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    table th {
+        background-color: #002D62;
+        color: white;
+    }
+
+    button {
+        background-color: #002D62;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+        margin-left: 70px;
+        transition: background 0.3s;
+    }
+
+    button:hover {
+        background-color: #004080;
+    }
+
+    .apply-btn {
+        background-color: #28a745;
+    }
+
+    .apply-btn:hover {
+        background-color: #218838;
+    }
+
+    .info-btn {
+        background-color: #007bff;
+    }
+
+    .info-btn:hover {
+        background-color: #0056b3;
+    }
 </style>
 
 </head>
@@ -33,7 +92,7 @@
   <aside class="sidebar">
     <div class="sidebar-header">
       <img src="images/logo1.png" alt="logo" />
-      <h2>CodingLab</h2>
+      <h2>Scholer's Bridge</h2>
     </div>
     <ul class="sidebar-links">
       <h4>
@@ -45,27 +104,30 @@
           <span class="material-symbols-outlined"> dashboard </span>Dashboard</a>
       </li>
       <li>
-        <a href="user-search.html"><span class="material-symbols-outlined"> manage_accounts </span>User Management</a>
+        <a href="user-search.html"><span class="material-symbols-outlined"> search </span>Search</a>
       </li>
       <li>
-        <a href="user-external.html"><span class="material-symbols-outlined"> folder_managed </span>Course Management</a>
+        <a href="user-external.html"><span class="material-symbols-outlined"> school </span>External Degrees</a>
       </li>
       <h4>
         <span>General</span>
         <div class="menu-separator"></div>
       </h4>
-      <!-- <li>
-        <a href="#"><span class="material-symbols-outlined"> folder </span>Projects</a>
+      <li>
+        <a href="user-Scholarship.html"><span class="material-symbols-outlined"> cast_for_education </span>Scholarships</a>
       </li>
       <li>
+        <a href="user-register.html"><span class="material-symbols-outlined"> how_to_reg </span>Register</a>
+      </li>
+      <!-- <li>
         <a href="#"><span class="material-symbols-outlined"> groups </span>Groups</a>
       </li>
       <li>
         <a href="#"><span class="material-symbols-outlined"> move_up </span>Transfer</a>
-      </li>
+      </li> -->
       <li>
         <a href="#"><span class="material-symbols-outlined"> flag </span>All Reports</a>
-      </li> -->
+      </li>
       <li>
         <a href="#"><span class="material-symbols-outlined">
             notifications_active </span>Notifications</a>
@@ -75,10 +137,10 @@
         <div class="menu-separator"></div>
       </h4>
       <li>
-        <a href="user-register.html"><span class="material-symbols-outlined"> account_circle </span>Profile</a>
+        <a href="user-profile.html"><span class="material-symbols-outlined"> account_circle </span>Profile</a>
       </li>
       <li>
-        <a href="#"><span class="material-symbols-outlined"> settings </span>Settings</a>
+        <a href="user-pro-setting.html"><span class="material-symbols-outlined"> settings </span>Settings</a>
       </li>
       <li>
         <a href="#"><span class="material-symbols-outlined"> logout </span>Logout</a>
@@ -87,78 +149,55 @@
     <div class="user-account">
       <div class="user-profile">
         <img src="images/profile-img.jpg" alt="Profile Image" />
-        <div class="user-detail">
-          <h3>Eva Murphy</h3>
-          <span>Web Developer</span>
-        </div>
+        
       </div>
     </div>
   </aside>
-  
+
   <div class="main-content">
     <div class="header">
-        <h1>User Management</h1>
+        <h1>Available Student Loans</h1>
     </div>
-    <button onclick="showAddUserForm()">Add User</button>
-    <div id="add-user-form" style="display: none;">
-        <h2>Add New User</h2>
-        <form id="user-form">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="role">Role:</label>
-            <select id="role" name="role">
-                <option value="student">Student</option>
-                <option value="admin">Admin</option>
-            </select>
-            <button type="submit">Add User</button>
-        </form>
-    </div>
-    <h2>Existing Users</h2>
-    <table id="user-table">
+    <button class="info-btn" onclick="showLoanInfo()">View Loan Details</button>
+    <table>
         <thead>
             <tr>
-                <th>Username</th>
-                <th>Email</th>
-                <th>Role</th>
-                <th>Actions</th>
+                <th>Loan Provider</th>
+                <th>Loan Name</th>
+                <th>Interest Rate</th>
+                <th>Loan Amount</th>
+                <th>Apply</th>
             </tr>
         </thead>
         <tbody>
-            <!-- User rows will be populated here -->
+            <tr>
+                <td>National Bank</td>
+                <td>Education Loan A</td>
+                <td>4.5%</td>
+                <td>Rs 10,000</td>
+                <td><button class="apply-btn">Apply</button></td>
+            </tr>
+            <tr>
+                <td>Student Finance</td>
+                <td>Future Fund Loan</td>
+                <td>3.8%</td>
+                <td>Rs 15,000</td>
+                <td><button class="apply-btn">Apply</button></td>
+            </tr>
+            <tr>
+                <td>Global Lending</td>
+                <td>Higher Education Loan</td>
+                <td>5.0%</td>
+                <td>Rs 20,000</td>
+                <td><button class="apply-btn">Apply</button></td>
+            </tr>
+            <!-- Add more -->
         </tbody>
     </table>
 </div>
 <script>
-    // JavaScript to handle form submission and display users
-    function showAddUserForm() {
-        const form = document.getElementById('add-user-form');
-        form.style.display = form.style.display === 'none' ? 'block' : 'none';
-    }
-
-    document.getElementById('user-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        // Add user to the table (this should be replaced with server-side logic)
-        const username = document.getElementById('username').value;
-        const email = document.getElementById('email').value;
-        const role = document.getElementById('role').value;
-
-        const table = document.getElementById('user-table').getElementsByTagName('tbody')[0];
-        const row = table.insertRow();
-        row.insertCell(0).textContent = username;
-        row.insertCell(1).textContent = email;
-        row.insertCell(2).textContent = role;
-        row.insertCell(3).innerHTML = '<button onclick="deleteRow(this)">Delete</button>';
-
-        // Reset form
-        this.reset();
-        showAddUserForm();
-    });
-
-    function deleteRow(button) {
-        const row = button.parentNode.parentNode;
-        row.parentNode.removeChild(row);
+    function showLoanInfo() {
+        alert('More details about the loan');
     }
 </script>
 

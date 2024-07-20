@@ -9,69 +9,81 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="2style.css" />
+  
   <style>
     body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f0f8ff; /* Light blue background */
+        font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
+        background-color: #f4f4f4;
     }
-
-    .container {
-        max-width: 800px;
-        margin: 20px auto;
-        margin-left: 80px;
+    .main-content {
         padding: 20px;
-        background-color: #ffffff;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
+        background-color: white;
     }
 
-    h1 {
-        text-align: center;
-        color: #0074D9;
-    }
-
-    .profile-header {
-        text-align: center;
+    .header {
+        background-color: #002D62;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
         margin-bottom: 20px;
+        margin-left: 70px;
     }
 
-    .profile-header img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid #0074D9;
+    .header h1 {
+        margin: 0;
     }
 
-    .profile-details {
-        margin-bottom: 20px;
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        margin-left: 70px;
     }
 
-    .profile-details label {
-        font-weight: bold;
-        color: #0074D9;
+    table th, table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
     }
 
-    .profile-details p {
+    table th {
+        background-color: #002D62;
+        color: white;
+    }
+
+    button {
+        background-color: #002D62;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
         font-size: 16px;
-    }
-
-    .settings-link {
-        display: block;
-        text-align: center;
         margin-top: 20px;
+        margin-left: 70px;
+        transition: background 0.3s;
     }
 
-    .settings-link a {
-        text-decoration: none;
-        color: #0074D9;
-        font-size: 18px;
+    button:hover {
+        background-color: #004080;
     }
 
-    .settings-link a:hover {
-        text-decoration: underline;
+    .apply-btn {
+        background-color: #28a745;
+    }
+
+    .apply-btn:hover {
+        background-color: #218838;
+    }
+
+    .info-btn {
+        background-color: #007bff;
+    }
+
+    .info-btn:hover {
+        background-color: #0056b3;
     }
 </style>
 
@@ -140,22 +152,52 @@
           </div>
         </div>
       </aside>
-  <div class="container">
-      <h1>User Profile</h1>
-      <div class="profile-header">
-          <img src="profile-picture.jpg" alt="Profile Picture">
-      </div>
-      <div class="profile-details">
-          <p><strong>Name:</strong> John Doe</p>
-          <p><strong>NIC:</strong> 123456789V</p>
-          <p><strong>Stream:</strong> Biological Science</p>
-          <p><strong>Birthday:</strong> January 1, 2000</p>
-      </div>
+  <div class="main-content">
+    <div class="header">
+        <h1>Available Student Loans</h1>
+    </div>
+    <button class="info-btn" onclick="showLoanInfo()">View Loan Details</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Loan Provider</th>
+                <th>Loan Name</th>
+                <th>Interest Rate</th>
+                <th>Loan Amount</th>
+                <th>Apply</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>National Bank</td>
+                <td>Education Loan A</td>
+                <td>4.5%</td>
+                <td>Rs 10,000</td>
+                <td><button class="apply-btn">Apply</button></td>
+            </tr>
+            <tr>
+                <td>Student Finance</td>
+                <td>Future Fund Loan</td>
+                <td>3.8%</td>
+                <td>Rs 15,000</td>
+                <td><button class="apply-btn">Apply</button></td>
+            </tr>
+            <tr>
+                <td>Global Lending</td>
+                <td>Higher Education Loan</td>
+                <td>5.0%</td>
+                <td>Rs 20,000</td>
+                <td><button class="apply-btn">Apply</button></td>
+            </tr>
+            <!-- Add more -->
+        </tbody>
+    </table>
+</div>
+<script>
+    function showLoanInfo() {
+        alert('More details about the loan');
+    }
+</script>
 
-  <div class="settings-link">
-          <a href="View profile setting.html">Change Details</a>
-      </div>
-  </div>
 </body>
 </html>
-  
