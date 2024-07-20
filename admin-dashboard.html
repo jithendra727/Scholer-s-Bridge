@@ -9,13 +9,31 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="2style.css" />
-  
+  <style>
+    body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .main-content {
+            margin-left: 100px;
+            padding: 20px;
+        }
+        .header {
+            background-color: #0074D9;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+</style>
+
 </head>
 <body>
   <aside class="sidebar">
     <div class="sidebar-header">
       <img src="images/logo1.png" alt="logo" />
-      <h2>Scholer's Bridge</h2>
+      <h2>CodingLab</h2>
     </div>
     <ul class="sidebar-links">
       <h4>
@@ -23,31 +41,31 @@
         <div class="menu-separator"></div>
       </h4>
       <li>
-        <a href="user-dashboard.html">
+        <a href="admin-dashboard.html">
           <span class="material-symbols-outlined"> dashboard </span>Dashboard</a>
       </li>
       <li>
-        <a href="user-search.html"><span class="material-symbols-outlined"> search </span>Search</a>
+        <a href="user-search.html"><span class="material-symbols-outlined"> manage_accounts </span>User Management</a>
       </li>
       <li>
-        <a href="user-external.html"><span class="material-symbols-outlined"> school </span>External Degrees</a>
+        <a href="user-external.html"><span class="material-symbols-outlined"> folder_managed </span>Course Management</a>
       </li>
       <h4>
         <span>General</span>
         <div class="menu-separator"></div>
       </h4>
-      <li>
-        <a href="user-register.html"><span class="material-symbols-outlined"> how_to_reg </span>Register</a>
-      </li>
       <!-- <li>
+        <a href="#"><span class="material-symbols-outlined"> folder </span>Projects</a>
+      </li>
+      <li>
         <a href="#"><span class="material-symbols-outlined"> groups </span>Groups</a>
       </li>
       <li>
         <a href="#"><span class="material-symbols-outlined"> move_up </span>Transfer</a>
-      </li> -->
+      </li>
       <li>
         <a href="#"><span class="material-symbols-outlined"> flag </span>All Reports</a>
-      </li>
+      </li> -->
       <li>
         <a href="#"><span class="material-symbols-outlined">
             notifications_active </span>Notifications</a>
@@ -57,10 +75,10 @@
         <div class="menu-separator"></div>
       </h4>
       <li>
-        <a href="user-profile.html"><span class="material-symbols-outlined"> account_circle </span>Profile</a>
+        <a href="user-register.html"><span class="material-symbols-outlined"> account_circle </span>Profile</a>
       </li>
       <li>
-        <a href="user-pro-setting.html"><span class="material-symbols-outlined"> settings </span>Settings</a>
+        <a href="#"><span class="material-symbols-outlined"> settings </span>Settings</a>
       </li>
       <li>
         <a href="#"><span class="material-symbols-outlined"> logout </span>Logout</a>
@@ -69,49 +87,25 @@
     <div class="user-account">
       <div class="user-profile">
         <img src="images/profile-img.jpg" alt="Profile Image" />
-        
+        <div class="user-detail">
+          <h3>Eva Murphy</h3>
+          <span>Web Developer</span>
+        </div>
       </div>
     </div>
   </aside>
-    <div class="grid">
-      <div class="item">
-        hjh
-      </div>
-      <div class="item">
-        bkjb
-      </div>
-      <div class="item">
-        lkm
-        
-      </div>
-      <div class="item">
-        <button class="cssbuttons-io" >
-          <a href="search.html" class="cssbuttons-io">
-          <span>
-            search 
-            <svg
-              viewBox="0 0 19.9 19.7"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-labelledby="title desc"
-              class="svg-icon search-icon"
-            >
-              <title>Search Icon</title>
-              <desc id="desc">A magnifying glass icon.</desc>
-              <g stroke="white" fill="none" class="search-path">
-                <path d="M18.5 18.3l-5.4-5.4" stroke-linecap="square"></path>
-                <circle r="7" cy="8" cx="8"></circle>
-              </g>
-            </svg>
-          </span>
-          </a>
-        </button>
-      </div>
-      <div class="item">
-        kjb
-      </div>
+    <!-- <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <a href="user-management.html">User Management</a>
+        <a href="course-management.html">Course Management</a>
+        <a href="settings.html">Settings</a>
+        <a href="logout.html">Logout</a>
+    </div> -->
+    <div class="main-content">
+        <div class="header">
+            <h1>Welcome, Admin</h1>
+        </div>
+        <p>Select an option from the sidebar to manage users, courses, or settings.</p>
     </div>
-
-
 </body>
 </html>
