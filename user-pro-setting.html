@@ -12,7 +12,7 @@
   <style>
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f0f8ff; /* Light blue background */
+        background-color: #f0f8ff;
         margin: 0;
         padding: 0;
     }
@@ -20,6 +20,7 @@
     .container {
         max-width: 800px;
         margin: 20px auto;
+        margin-left: 80px;
         padding: 20px;
         background-color: #ffffff;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -31,45 +32,60 @@
         color: #0074D9;
     }
 
-    .profile-header {
-        text-align: center;
-        margin-bottom: 20px;
+    .form-group {
+        margin-bottom: 15px;
     }
 
-    .profile-header img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid #0074D9;
-    }
-
-    .profile-details {
-        margin-bottom: 20px;
-    }
-
-    .profile-details label {
+    .form-group label {
         font-weight: bold;
         color: #0074D9;
-    }
-
-    .profile-details p {
-        font-size: 16px;
-    }
-
-    .settings-link {
         display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+        border-color: #0074D9;
+        outline: none;
+    }
+
+    .form-group button {
+        background-color: #0074D9;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 12px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .form-group button:hover {
+        background-color: #0056b3;
+    }
+
+    .back-link {
         text-align: center;
         margin-top: 20px;
     }
 
-    .settings-link a {
+    .back-link a {
         text-decoration: none;
         color: #0074D9;
         font-size: 18px;
     }
 
-    .settings-link a:hover {
+    .back-link a:hover {
         text-decoration: underline;
     }
 </style>
@@ -124,7 +140,7 @@
         <a href="user-register.html"><span class="material-symbols-outlined"> account_circle </span>Profile</a>
       </li>
       <li>
-        <a href="#"><span class="material-symbols-outlined"> settings </span>Settings</a>
+        <a href="user-pro-setting.html"><span class="material-symbols-outlined"> settings </span>Settings</a>
       </li>
       <li>
         <a href="#"><span class="material-symbols-outlined"> logout </span>Logout</a>
@@ -141,22 +157,47 @@
     </div>
   </aside>
 
-  <div class="container">
-      <h1>User Profile</h1>
-      <div class="profile-header">
-          <img src="profile-picture.jpg" alt="Profile Picture">
+  <body>
+      <div class="container">
+          <h1>Settings</h1>
+          <form id="settings-form">
+              <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" value="John Doe">
+              </div>
+              <div class="form-group">
+                  <label for="nic">NIC:</label>
+                  <input type="text" id="nic" value="123456789V">
+              </div>
+              <div class="form-group">
+                  <label for="stream">Stream:</label>
+                  <select id="stream">
+                      <option value="Biological Science" selected>Biological Science</option>
+                      <option value="Physical Science">Physical Science</option>
+                      <option value="Commerce">Commerce</option>
+                      <option value="Arts">Arts</option>
+                      <option value="Technology">Technology</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                  <label for="birthday">Birthday:</label>
+                  <input type="date" id="birthday" value="2000-01-01">
+              </div>
+              <div class="form-group">
+                  <button type="submit">Save Changes</button>
+              </div>
+          </form>
+          <div class="back-link">
+      <a href="View Profile.html">Back to Profile</a>
+  
       </div>
-      <div class="profile-details">
-          <p><strong>Name:</strong> John Doe</p>
-          <p><strong>NIC:</strong> 123456789V</p>
-          <p><strong>Stream:</strong> Biological Science</p>
-          <p><strong>Birthday:</strong> January 1, 2000</p>
-      </div>
-
-  <div class="settings-link">
-          <a href="View profile setting.html">Change Details</a>
-      </div>
-  </div>
-</body>
-</html>
+      <script>
+          document.getElementById('settings-form').addEventListener('submit', function(event) {
+              event.preventDefault();
+              // Add logic to handle form submission, e.g., sending data to the server
+              alert('Changes saved successfully!');
+          });
+      </script>
+  </body>
+  </html>
   
