@@ -1,165 +1,155 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - www.codingnepalweb.com -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Scholer's Bridge</title>
-  <!-- Linking Google Font Link For Icons -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="2style.css" />
   <style>
      body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        
-        /* .main-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    } */
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
 
     .content {
-      display: flex;
-      justify-content: space-between;
-      width: 80%;
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
     }
 
-        .box{
-          width: 60%;
-          margin-left: 100px;
-          margin-top: 30px;
-        }
-
-        .button-container {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      width: 35%;
+    .box{
+        width: 60%;
+        margin-left: 100px;
+        margin-top: 30px;
     }
-        button {
-          margin: 50px;
-          margin-top: -1%;
-          margin-left: 120px;
-          margin-right: 30px;
-          border: none;
-          display: flex;
-          padding: 0.75rem 1.5rem;
-          background-color: #488aec;
-          color: #ffffff;
-          font-size: 0.75rem;
-          line-height: 1rem;
-          font-weight: 700;
-          text-align: center;
-          text-transform: uppercase;
-          vertical-align: middle;
-          align-items: center;
-          border-radius: 0.5rem;
-          user-select: none;
-          gap: 0.75rem;
-          box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
-          transition: all .6s ease;
-        }
 
-        button:hover {
-          box-shadow: 0 10px 15px -3px #488aec4f, 0 4px 6px -2px #488aec17;
-        }
+    .button-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 35%;
+    }
 
-        button:focus,button:active {
-          opacity: .85;
-          box-shadow: none;
-        }
+    button {
+        margin: 50px;
+        margin-top: -1%;
+        margin-left: 120px;
+        margin-right: 30px;
+        border: none;
+        display: flex;
+        padding: 0.75rem 1.5rem;
+        background-color: #488aec;
+        color: #ffffff;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        vertical-align: middle;
+        align-items: center;
+        border-radius: 0.5rem;
+        user-select: none;
+        gap: 0.75rem;
+        box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
+        transition: all .6s ease;
+    }
 
-        button svg {
-          width: 1.25rem;
-          height: 1.25rem;
-        }
+    button:hover {
+        box-shadow: 0 10px 15px -3px #488aec4f, 0 4px 6px -2px #488aec17;
+    }
 
+    button:focus,button:active {
+        opacity: .85;
+        box-shadow: none;
+    }
 
-        #add-course-form {
-    display: none;
-    width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+    button svg {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
 
-#add-course-form h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-}
+    #add-course-form {
+        display: none;
+        width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-#course-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
-}
+    #add-course-form h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
 
-#course-form input[type="text"],
-#course-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 14px;
-    color: #333;
-}
+    #course-form label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #555;
+    }
 
-#course-form textarea {
-    height: 100px;
-    resize: vertical;
-}
+    #course-form input[type="text"],
+    #course-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 14px;
+        color: #333;
+    }
 
-#course-form button[type="submit"]:hover {
-    background-color: #5d9ed3;
-}
+    #course-form textarea {
+        height: 100px;
+        resize: vertical;
+    }
 
-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
+    #course-form button[type="submit"]:hover {
+        background-color: #5d9ed3;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
     }
 
     table, th, td {
-      border: 1px solid #ddd;
+        border: 1px solid #ddd;
     }
 
     th, td {
-      padding: 10px;
-      text-align: left;
+        padding: 10px;
+        text-align: left;
     }
 
     th {
-      background-color: #f2f2f2;
+        background-color: #f2f2f2;
     }
 
     tbody tr:nth-child(even) {
-      background-color: #f9f9f9;
+        background-color: #f9f9f9;
     }
 
     tbody tr:hover {
-      background-color: #f1f1f1;
+        background-color: #f1f1f1;
     }
-        
-</style>
-
+  </style>
 </head>
 <body>
   <aside class="sidebar">
     <div class="sidebar-header">
       <img src="images/logo1.png" alt="logo" />
-      <h2>CodingLab</h2>
+      <h2>Scholer's Bridge</h2>
     </div>
     <ul class="sidebar-links">
       <h4>
@@ -180,21 +170,8 @@ table {
         <span>General</span>
         <div class="menu-separator"></div>
       </h4>
-      <!-- <li>
-        <a href="#"><span class="material-symbols-outlined"> folder </span>Projects</a>
-      </li>
       <li>
-        <a href="#"><span class="material-symbols-outlined"> groups </span>Groups</a>
-      </li>
-      <li>
-        <a href="#"><span class="material-symbols-outlined"> move_up </span>Transfer</a>
-      </li>
-      <li>
-        <a href="#"><span class="material-symbols-outlined"> flag </span>All Reports</a>
-      </li> -->
-      <li>
-        <a href="#"><span class="material-symbols-outlined">
-            notifications_active </span>Notifications</a>
+        <a href="#"><span class="material-symbols-outlined"> notifications_active </span>Notifications</a>
       </li>
       <h4>
         <span>Account</span>
@@ -222,121 +199,91 @@ table {
   </aside>
   
   <div class="main-content">
-    <div class="header"> <div class="left">
-      <h1>Scholar's Bridge</h1>
+    <div class="header">
+      <div class="left">
+        <h1>Scholar's Bridge</h1>
+      </div>
+      <div class="right">
+        <h1>User Management</h1>
+      </div>
     </div>
-    <div class="right">
-      <h1>User Management</h1>
-    </div>
-  </div>
 
-  <div class="content">
-    <div class="box">
-      <h2>Existing Users</h2>
-      <table id="course-table">
-        <thead>
-          <tr>
-            <th>Username</th>
+    <div class="content">
+      <div class="box">
+        <h2>Existing Users</h2>
+        <table id="user-table">
+          <thead>
+            <tr>
+              <th>Username</th>
               <th>Email</th>
               <th>Role</th>
               <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Course rows will be populated here -->
-        </tbody>
-      </table>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- User rows will be populated here -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="button-container">
+        <button onclick="showAddUserForm()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 3H12H8C6.34315 3 5 4.34315 5 6V18C5 19.6569 6.34315 21 8 21H11M13.5 3L19 8.625M13.5 3V7.625C13.5 8.17728 13.9477 8.625 14.5 8.625H19M19 8.625V11.8125" stroke="#ffffff" stroke-width="2"></path>
+            <path d="M17 15V18M17 21V18M17 18H14M17 18H20" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+          ADD USER
+        </button>
+      </div>
     </div>
 
-    <div class="button-container">
-      <button onclick="showAddCourseForm()">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 3H12H8C6.34315 3 5 4.34315 5 6V18C5 19.6569 6.34315 21 8 21H11M13.5 3L19 8.625M13.5 3V7.625C13.5 8.17728 13.9477 8.625 14.5 8.625H19M19 8.625V11.8125" stroke="#ffffff" stroke-width="2"></path>
-          <path d="M17 15V18M17 21V18M17 18H14M17 18H20" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-        ADD USER
-      </button>
-    </div>
-  </div>
-
-  <div id="add-course-form">
-    <h2>Add New User</h2>
-    <form id="course-form">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <label for="role">Role:</label>
-      <select id="role" name="role">
+    <div id="add-course-form">
+      <h2>Add New User</h2>
+      <form id="course-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="role">Role:</label>
+        <select id="role" name="role">
           <option value="student">Student</option>
           <option value="admin">Admin</option>
-      </select>
-      <button type="submit">Add User</button>
-    </form>
-  </div>
-</div>
-    <!-- <button onclick="showAddUserForm()">Add User</button>
-    <div id="add-user-form" style="display: none;">
-        <h2>Add New User</h2>
-        <form id="user-form">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="role">Role:</label>
-            <select id="role" name="role">
-                <option value="student">Student</option>
-                <option value="admin">Admin</option>
-            </select>
-            <button type="submit">Add User</button>
-        </form>
+        </select>
+        <button type="submit">Add User</button>
+      </form>
     </div>
-    <h2>Existing Users</h2>
-    <table id="user-table">
-        <thead>
-            <tr>
-                <th>Username</th>
-                <th>Email</th>
-                <th>Role</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- User rows will be populated here 
-        </tbody>
-    </table> -->
-</div>
-<script>
-    // JavaScript to handle form submission and display users
+  </div>
+
+  <script>
     function showAddUserForm() {
-        const form = document.getElementById('add-user-form');
-        form.style.display = form.style.display === 'none' ? 'block' : 'none';
+      document.getElementById("add-course-form").style.display = "block";
     }
 
-    document.getElementById('user-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        // Add user to the table (this should be replaced with server-side logic)
-        const username = document.getElementById('username').value;
-        const email = document.getElementById('email').value;
-        const role = document.getElementById('role').value;
-
-        const table = document.getElementById('user-table').getElementsByTagName('tbody')[0];
-        const row = table.insertRow();
-        row.insertCell(0).textContent = username;
-        row.insertCell(1).textContent = email;
-        row.insertCell(2).textContent = role;
-        row.insertCell(3).innerHTML = '<button onclick="deleteRow(this)">Delete</button>';
-
-        // Reset form
-        this.reset();
-        showAddUserForm();
+    document.getElementById("course-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      const username = document.getElementById("username").value;
+      const email = document.getElementById("email").value;
+      const role = document.getElementById("role").value;
+      
+      const newRow = document.createElement("tr");
+      
+      newRow.innerHTML = `
+        <td>${username}</td>
+        <td>${email}</td>
+        <td>${role}</td>
+        <td><button onclick="deleteUser(this)">Delete</button></td>
+      `;
+      
+      document.querySelector("#user-table tbody").appendChild(newRow);
+      
+      document.getElementById("add-course-form").style.display = "none";
+      document.getElementById("course-form").reset();
     });
 
-    function deleteRow(button) {
-        const row = button.parentNode.parentNode;
-        row.parentNode.removeChild(row);
+    function deleteUser(button) {
+      button.closest("tr").remove();
     }
-</script>
-
+  </script>
 </body>
 </html>
