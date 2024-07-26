@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Notification System</title>
+  <script>
+    async function sendNotification() {
+      const message = document.getElementById('message').value;
+      const response = await fetch('/notifications', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ message })
+      });
+      if (response.ok) {
+        alert('Notification sent!');
+      } else {
+        alert('Failed to send notification.');
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Admin - Send Notification</h1>
+  <input type="text" id="message" placeholder="Enter your message">
+  <button onclick="sendNotification()">Send</button>
+</body>
+</html>

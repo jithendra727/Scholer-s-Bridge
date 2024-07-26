@@ -6,11 +6,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scholer's Bridge</title>
+  <title>Scholers' Bridge</title>
   <!-- Linking Google Font Link For Icons -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link rel="stylesheet" href="1style.css" />
+  <link rel="stylesheet" href="css/1style.css" />
 
      <style>
         
@@ -32,7 +32,7 @@
     }
 
     button {
-      background-color: #002D62;
+      background-color: #053638;
       color: white;
       border: none;
       border-radius: 5px;
@@ -43,7 +43,7 @@
       margin-left: 100px;
     }
     button:hover {
-      background-color: #0056b3;
+      background-color: #13b4b9;
     }
     #add-course-container {
       display: flex;
@@ -95,11 +95,11 @@
       border: 1px solid #ddd;
     }
     th {
-      background-color: #002D62;
+      background-color: #053638;
       color: white;
     }
     .actions button {
-      background-color: #002D62;
+      background-color: #053638;
       color: white;
       border: none;
       border-radius: 5px;
@@ -109,7 +109,7 @@
       margin-right: 5px;
     }
     .actions button.edit {
-      background-color: #002D62;
+      background-color: #053638;
     }
     .actions button.delete {
       background-color: #dc3545;
@@ -118,7 +118,6 @@
       opacity: 0.8;
     }
     </style>
-    </style>  
 </head>
 <body>
   <aside class="sidebar">
@@ -154,27 +153,27 @@
       <li>
         <a href="#"><span class="material-symbols-outlined"> pageview </span>View Students</a>
       </li>
-      <li>
+      <!-- <li>
         <a href="#"><span class="material-symbols-outlined"> flag </span>All Reports</a>
-      </li>
+      </li> -->
       <li>
-        <a href="#"><span class="material-symbols-outlined">notifications_active </span>Notifications</a>
+        <a href="uni-notification.html"><span class="material-symbols-outlined">notifications_active </span>Notifications</a>
       </li>
       <h4>
         <span>Account</span>
         <div class="menu-separator"></div>
       </h4>
       <li>
-        <a href="userregistrationform.html"><span class="material-symbols-outlined"> account_circle </span>Profile</a>
+        <a href="uni-profile.html"><span class="material-symbols-outlined"> account_circle </span>Profile</a>
       </li>
       <li>
-        <a href="#"><span class="material-symbols-outlined"> settings </span>Settings</a>
+        <a href="Uni-pro-setting.html"><span class="material-symbols-outlined"> settings </span>Settings</a>
       </li>
       <li>
-        <a href="#"><span class="material-symbols-outlined"> logout </span>Logout</a>
+        <a href="index.html"><span class="material-symbols-outlined"> logout </span>Logout</a>
       </li>
     </ul>
-    <div class="user-account">
+    <!-- <div class="user-account">
       <div class="user-profile">
         <img src="images/profile-img.jpg" alt="Profile Image" />
         <div class="user-detail">
@@ -182,8 +181,9 @@
           <span>Web Developer</span>
         </div>
       </div>
-    </div>
+    </div> -->
   </aside>
+
     
 
   <div class="header">
@@ -204,7 +204,7 @@
         <input type="text" id="course-name" name="course-name" required>
         <label for="course-description">Description:</label>
         <textarea id="course-description" name="course-description" required></textarea>
-        <button type="submit">Add Course</button>
+        <button type="submit" style="margin: 20px;" >Add Course</button>
       </form>
     </div>
   </div>

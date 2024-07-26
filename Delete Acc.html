@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scholers' Bridge</title>
+  <!-- Linking Google Font Link For Icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="css/2style.css" />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #053638;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .warning {
+            color: #e40800;
+            font-weight: bold;
+        }
+        .form-group {
+            margin: 20px 0;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .buttons {
+            margin-top: 30px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        .cancel-button {
+            background-color: #002D62;
+            color: #fff;
+        }
+        .delete-button {
+            background-color: #d3352f;
+            color: #fff;
+        }
+        .delete-button:hover {
+            background-color: #ff0800;
+        }
+        .cancel-button:hover {
+            background-color: #001e42;
+        }
+    </style>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+          <img src="images/logo1.png" alt="logo" />
+          <h2>Scholers' Bridge</h2>
+        </div>
+        <ul class="sidebar-links">
+          <h4>
+            <span>Main Menu</span>
+            <div class="menu-separator"></div>
+          </h4>
+          <li>
+            <a href="user-dashboard.html"><span class="material-symbols-outlined"> dashboard </span>Dashboard</a>
+          </li>
+          <li>
+            <a href="user-search.html"><span class="material-symbols-outlined"> search </span>Search</a>
+          </li>
+          <li>
+            <a href="user-external.html"><span class="material-symbols-outlined"> school </span>External Degrees</a>
+          </li>
+          <h4>
+            <span>General</span>
+            <div class="menu-separator"></div>
+          </h4>
+          <li>
+            <a href="user-Scholarship.html"><span class="material-symbols-outlined"> cast_for_education </span>Scholarships</a>
+          </li>
+          <!-- <li>
+            <a href="user-register.html"><span class="material-symbols-outlined"> how_to_reg </span>Register</a>
+          </li> -->
+          <!-- <li>
+            <a href="#"><span class="material-symbols-outlined"> groups </span>Groups</a>
+          </li>
+          <li>
+            <a href="#"><span class="material-symbols-outlined"> move_up </span>Transfer</a>
+          </li> -->
+          <!-- <li>
+            <a href="#"><span class="material-symbols-outlined"> flag </span>All Reports</a>
+          </li> -->
+          <li>
+            <a href="user-notification.html"><span class="material-symbols-outlined">
+                notifications_active </span>Notifications</a>
+          </li>
+          <h4>
+            <span>Account</span>
+            <div class="menu-separator"></div>
+          </h4>
+          <li>
+            <a href="user-profile.html"><span class="material-symbols-outlined"> account_circle </span>Profile</a>
+          </li>
+          <li>
+            <a href="user-pro-setting.html"><span class="material-symbols-outlined"> settings </span>Settings</a>
+          </li>
+          <li>
+            <a href="index.html"><span class="material-symbols-outlined"> logout </span>Logout</a>
+          </li>
+          <li>
+            <a href="Delete Acc.html"><span class="material-symbols-outlined"> Delete </span>Delete Account</a>
+          </li>
+        </ul>
+        <!-- <div class="user-account">
+          <div class="user-profile">
+            <img src="images/profile-img.jpg" alt="Profile Image" />
+            
+          </div>
+        </div> -->
+      </aside>
+
+      <div class="header">
+        <div class="left">
+          <h1>Scholar's Bridge</h1>
+        </div>
+        <div class="right">
+          <h1>Delete account</h1>
+      </div>
+      </div>
+
+    <div class="container">
+        <h1 style="color:#002D62;">Delete Account</h1>
+        <p class="warning">Warning: This action cannot be undone!</p>
+        <p>Are you sure you want to delete your account? This will permanently remove all your data from our system.</p>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="buttons">
+            <button class="cancel-button" onclick="cancelDelete()">Cancel</button>
+            <button class="delete-button" onclick="confirmDelete()">Delete Account</button>
+        </div>
+    </div>
+    <!-- <script>
+        function cancelDelete() {
+            window.location.href = 'profile.html'; // Change this to the appropriate page
+        }
+
+        function confirmDelete() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username && password) {
+                // Add the logic to verify credentials and delete the account
+                // For example, you can make an AJAX request to your server here
+                alert('Account deleted successfully!');
+                window.location.href = 'logout.html'; // Change this to the appropriate page
+            } else {
+                alert('Please enter your username and password.');
+            }
+        }
+    </script> -->
+</body>
+</html>
